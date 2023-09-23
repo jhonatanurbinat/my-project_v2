@@ -28,10 +28,16 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
+
     - name: Gran execute
-      run: chmod +x gradlew       
+      run: chmod +x gradlew
+
     - name: Build with Gradle
       run: ./gradlew build
+
+    - name: List
+      run: ls -latr
+
     - name: Build   
       uses: mr-smithers-excellent/docker-build-push@v6
       with:
