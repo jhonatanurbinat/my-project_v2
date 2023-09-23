@@ -32,8 +32,6 @@ jobs:
       run: chmod +x gradlew       
     - name: Build with Gradle
       run: ./gradlew build
-      with:
-        arguments: build
     - name: Build   
       uses: mr-smithers-excellent/docker-build-push@v6
       with:
